@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pick For Me</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="wrap">
+
+  <!-- Mood Screen -->
+  <section id="mood-screen">
+
+    <p class="kicker">Pick For Me</p>
+
+    <h1>How are you feeling <em>right now?</em></h1>
+
+    <p class="sub">Your mood sets the mood of the whole app.</p>
+
+    <div class="mood-grid">
+
+      <button class="mood-btn" data-mood="adventurous">
+        <span class="mood-emoji">🔥</span>
+        <span class="mood-name">Adventurous</span>
+      </button>
+
+      <button class="mood-btn" data-mood="cozy">
+        <span class="mood-emoji">🌙</span>
+        <span class="mood-name">Cozy & chill</span>
+      </button>
+
+      <button class="mood-btn" data-mood="energetic">
+        <span class="mood-emoji">⚡</span>
+        <span class="mood-name">Energetic</span>
+      </button>
+
+      <button class="mood-btn" data-mood="nostalgic">
+        <span class="mood-emoji">📼</span>
+        <span class="mood-name">Nostalgic</span>
+      </button>
+
+    </div>
+
+  </section>
+
+  <!-- Main Screen -->
+  <section id="main-screen" class="hidden">
+
+    <div class="topbar">
+
+      <h2 id="mood-label">Feeling adventurous</h2>
+
+      <button class="link-btn" id="change-mood">
+        change mood
+      </button>
+
+    </div>
+
+    <!-- Tabs -->
+
+    <div class="tabs">
+
+      <button class="tab-btn active" data-category="food">
+        🍜 Food
+      </button>
+
+      <button class="tab-btn" data-category="movies">
+        🎬 Movies
+      </button>
+
+      <button class="tab-btn" data-category="games">
+        🎮 Chill games
+      </button>
+
+    </div>
+
+    <!-- Result Card -->
+
+    <div class="stage">
+
+      <div class="card" id="result-card">
+
+        <div id="card-empty" class="card-empty">
+
+          <span class="card-empty-emoji">🎲</span>
+
+          <p>Hit the button below to get a pick.</p>
+
+        </div>
+
+        <div id="card-content" class="card-content hidden">
+
+          <span id="card-tag" class="card-tag">Food</span>
+
+          <h2 id="card-title">Title</h2>
+
+          <p id="card-desc" class="card-desc">Description</p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- Buttons -->
+
+    <div class="actions">
+
+      <button class="primary-btn" id="spin-btn">
+        Surprise me
+      </button>
+
+      <button class="secondary-btn hidden" id="copy-btn">
+        Copy this pick
+      </button>
+
+    </div>
+
+    <p id="copy-toast" class="toast hidden">
+      Copied to clipboard
+    </p>
+
+    <!-- History -->
+
+    <div class="history">
+
+      <p class="history-title">Recent picks</p>
+
+      <ul id="history-list" class="history-list">
+
+        <li class="history-empty">
+          Nothing yet — your picks will show up here.
+        </li>
+
+      </ul>
+
+    </div>
+
+  </section>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
